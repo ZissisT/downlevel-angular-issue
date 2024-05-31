@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { URL } from 'whatwg-url';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'downlevel-issue';
+  url: URL;
+  constructor() {
+    this.url = new URL('www.google.com');
+  }
 }
